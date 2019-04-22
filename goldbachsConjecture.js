@@ -41,11 +41,11 @@ function isPrime(n) {
     return false;
   }
 
-  for (var potentialDivisor = 2; potentialDivisor < n; potentialDivisor++) {
+  for (var potentialDivisor = 2; potentialDivisor < Math.sqrt(n); potentialDivisor++) {
 
-    // if (n % potentialDivisor === 0) {
-    //   return false;
-    // }
+    if (n % potentialDivisor === 0) {
+      return false;
+    }
   }
 
   return true;
